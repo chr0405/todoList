@@ -1,0 +1,10 @@
+client는 3000이 열어주고 있음
+server는 4000이 열어주고 있음
+
+때문에 둘은 출처(origin)가 다르다
+마음대로 data를 꺼내갈 수 없음
+server에서 CORS 정책을 풀어야 함
+
+useEffect?
+map을 사용할 때 key 값 입력
+react에서 <></> 이것과 </> 이것의 구분
