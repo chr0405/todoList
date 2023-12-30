@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
-  // useEffect에서 두 번째 인자에 아무것도 없으면 한 번만 실행 
+  // useEffect에서 두 번째 인자(deps)에 아무것도 없으면 한 번만 실행
   
   const onSubmitHandler = async (event) => {
     event.preventDefault();

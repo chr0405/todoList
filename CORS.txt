@@ -6,8 +6,38 @@ server는 4000이 열어주고 있음
 server에서 CORS 정책을 풀어야 함
 
 useEffect?
+component가 랜더링 될 때마다 특정 작업을 실행할 수 있도록 하는 react Hook
+component가 mount 됐을 때
+		= 처음 나타났을 때
+		처음 랜더링 될 때 한 번만 실행하고 싶을 시 deps 위치에 빈 배열
+		초기에 무언가를 할 때 유용
+		unmount 됐을 때
+		update 됐을 때
+		= deps 안에 검사하고 싶은 값을 넣는다
+
+특정 작업을 처리
+기본 형태는 useEffect( function, deps )
+function은 수행하고자 하는 작업
+deps는 배열로, 배열 안에는 검사하고자 하는 특정 값 or 빈 배열
+배열에 두 개 이상이 들어있을 경우, 하나만 변경돼도 실행
+useEffect 함수의 return에 작성한 콜백 함수를 cleanup 함수라고 함
+
+setInterval
+setInterval(() => console.log('코딩', 1000);
+
+setTimeout
+setTimeout(() => console.log("1초 후에 실행"), 1000);
+
+
 map을 사용할 때 key 값 입력
-react에서 <></> 이것과 </> 이것의 구분
+key 값을 부여함으로써 변화가 생겼을 때 그 부분만 리랜더링
+key 값은 형제들 사이에서 고유한 값이어야 한다
+
+react에서 <></>
+Fragments
+https://ko.legacy.reactjs.org/docs/fragments.html
+닫는 태그가 없는 경우도 반드시 뒤에 /를 붙인다
+
 react-queary
 
 git에 client 폴더가 열리지 않는 경우가 발생했다
@@ -19,3 +49,5 @@ git rm --cached .-rf
 git config --global core.autocrlf true
 git add .
 그 후 commit과 push
+
+https://www.daleseo.com/js-timer/
